@@ -32,3 +32,16 @@ Route::view('/teste', 'testerota');
 //     echo 'Esse foi o titulo: ' .$titulo .'</br>';
 // });
 
+
+// Exemplo de rota com name e redirect
+// Route::get('/config', function(){
+//     return redirect()->route('r-info');
+// })->name('config');
+
+// Route::get('/config/info', function(){
+//     echo 'PAGINA DE INFORMAÇÕES';
+// })->name('r-info');
+
+// Route::get('/config/permissoes', function(){
+//     echo 'PAGINA DE PERMISSÕES';
+// })->name('r-permissoes');
