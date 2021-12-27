@@ -20,3 +20,15 @@ Route::get('/', function () {
 // Route::redirect('/', '/teste');
 
 Route::view('/teste', 'testerota');
+
+// Exemplo de rota dinamica
+// Route::get('/teste/{sfd}', function($slug){
+//     echo 'Titulo da noticia:' .$slug;
+// });
+
+// Exemplo de rota dinamica com dois parametros
+// Route::get('/teste/{id}/olha/{titulo}', function($id, $titulo){
+//     echo 'Esse foi o ID: '.$id .'</br>';
+//     echo 'Esse foi o titulo: ' .$titulo .'</br>';
+// });
+
