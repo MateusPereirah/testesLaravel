@@ -63,3 +63,7 @@ Route::view('/teste', 'testerota');
 // });
 
 
+//Sempre recomendado por o fallback por ultimo
+Route::fallback(function(){
+    return view('404');
+});
