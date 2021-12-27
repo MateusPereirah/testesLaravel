@@ -45,3 +45,21 @@ Route::view('/teste', 'testerota');
 // Route::get('/config/permissoes', function(){
 //     echo 'PAGINA DE PERMISSÕES';
 // })->name('r-permissoes');
+
+
+
+// Route::prefix('/config')->group(function(){
+//     Route::get('/', function(){
+//         return view('config');
+//     });
+
+//     Route::get('info', function(){
+//         echo 'PAGINA DE INFORMÇÃOES 2';
+//     });
+
+//     Route::get('permissoes', function(){
+//         echo 'PAGINA DE INFORMAÇÕES 2';
+//     });
+// });
+
+
