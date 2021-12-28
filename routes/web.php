@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ConfigController;
+use App\Http\Controllers\HomeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,13 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 // Route::redirect('/', '/teste');
 
-Route::view('/teste', 'testerota');
+//Route::view('/teste', 'testerota');
 
 // Exemplo de rota dinamica
 // Route::get('/teste/{sfd}', function($slug){
@@ -61,6 +60,11 @@ Route::view('/teste', 'testerota');
 //         echo 'PAGINA DE INFORMAÇÕES 2';
 //     });
 // });
+
+Route::get('/', [HomeController::class, 'index']);
+
+Route::get('/config', [ConfigController::class, 'index']);
+Route::get('/config/user', [ConfigController::class, 'user']);
 
 
 //Sempre recomendado por o fallback por ultimo
