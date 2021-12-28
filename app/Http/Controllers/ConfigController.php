@@ -28,15 +28,23 @@ class ConfigController extends Controller
         // echo "<br> O nome é: " .$nome ."<br>";
         // echo "A Idade é: " .$idade ."<br>";
 
-        $nome = $request->only(['nome']);
-        $idade = $request->only(['idade']);
+        // $nome = $request->only(['nome']);
+        // $idade = $request->only(['idade']);
 
-        echo "<br> O nome é: " .$nome['nome'] ."<br>";
-        echo "A Idade é: " .$idade['idade'] ."<br>";
+        // echo "<br> O nome é: " .$nome['nome'] ."<br>";
+        // echo "A Idade é: " .$idade['idade'] ."<br>";
 
-        echo "O metodo foi: " .$request->method();
+        // echo "O metodo foi: " .$request->method();
 
-        return view('config');
+        $nome = "Mateus";
+        $estado = "São Paulo";
+
+        $dados = [
+            'nome' => $nome,
+            'estado' => $estado
+        ];
+
+        return view('config', $dados);
     }
 
     public function user(){

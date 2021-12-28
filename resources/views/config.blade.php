@@ -3,6 +3,8 @@
     PAGINA DE CONFIGURAÇÕES
 </h1>
 
+<h2> Meu nome é {{$nome}} e meu Estado é {{$estado}} </h2>
+
 <form method="POST">
     @csrf
 
