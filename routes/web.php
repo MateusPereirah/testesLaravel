@@ -37,13 +37,13 @@ use App\Http\Controllers\HomeController;
 //     return redirect()->route('r-info');
 // })->name('config');
 
-// Route::get('/config/info', function(){
-//     echo 'PAGINA DE INFORMAÇÕES';
-// })->name('r-info');
+Route::get('/config/info', function(){
+    echo 'PAGINA DE INFORMAÇÕES';
+})->name('r-info');
 
-// Route::get('/config/permissoes', function(){
-//     echo 'PAGINA DE PERMISSÕES';
-// })->name('r-permissoes');
+Route::get('/config/permissoes', function(){
+    echo 'PAGINA DE PERMISSÕES';
+})->name('r-permissoes');
 
 
 
@@ -64,6 +64,7 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/config', [ConfigController::class, 'index']);
+Route::post('/config', [ConfigController::class, 'index']);
 Route::get('/config/user', [ConfigController::class, 'user']);
 
 
