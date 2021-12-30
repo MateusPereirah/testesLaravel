@@ -25,8 +25,8 @@ class ConfigController extends Controller
         // $nome = $request->query('nome', "não informado");
         // $idade = $request->query('idade', "não informado");
 
-        echo "<br> O nome é: " .$nome ."<br>";
-        echo "A Idade é: " .$idade ."<br>";
+        // echo "<br> O nome é: " .$nome ."<br>";
+        // echo "A Idade é: " .$idade ."<br>";
 
         // $nome = $request->only(['nome']);
         // $idade = $request->only(['idade']);
@@ -34,15 +34,23 @@ class ConfigController extends Controller
         // echo "<br> O nome é: " .$nome['nome'] ."<br>";
         // echo "A Idade é: " .$idade['idade'] ."<br>";
 
-        echo "O metodo foi: " .$request->method();
+        // echo "O metodo foi: " .$request->method();
 
         // $nome = "Mateus";
-        // $estado = "São Paulo";
+        // $idade = 119;
 
-        // $dados = [
-        //     'nome' => $nome,
-        //     'estado' => $estado
-        // ];
+        $lista = [
+            "ovos",
+            "farinha",
+            "fermento",
+            "leite"
+        ];
+
+        $dados = [
+            'nome' => $nome,
+            'idade' => $idade,
+            'lista' => $lista
+        ];
 
         return view('config', $dados);
     }
