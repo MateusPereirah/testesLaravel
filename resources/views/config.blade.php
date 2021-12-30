@@ -1,9 +1,12 @@
-
+@extends('layouts.admin')
+@section('title', 'Formulario')
+    
+@section('content')
 <h1>
     PAGINA DE CONFIGURAÇÕES
 </h1>
 
-<h2> Meu nome é {{$nome}} e meu Estado é {{$estado}} </h2>
+{{-- <h2> Meu nome é {{$nome}} e meu Estado é {{$estado}} </h2> --}}
 
 <form method="POST">
     @csrf
@@ -25,3 +28,4 @@
 <a href="/config/permissoes">PERMISSÕES</a>
 
 Versão: {{$versao}} <br>
+@endsection
