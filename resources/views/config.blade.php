@@ -23,3 +23,5 @@
 <a href="/config/info">INFO</a>
     
 <a href="/config/permissoes">PERMISSÕES</a>
+
+Versão: {{$versao}} <br>
