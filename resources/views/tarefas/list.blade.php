@@ -6,11 +6,7 @@
 
     <a href="{{route('tarefas.add')}}">Adicionar nova tarefa</a>
 
-    @if(session('warning'))
-    <br>
-        {{session('warning')}}
-    <br>
-    @endif
+   
 
     @if(count($list) > 0)
         @foreach($list as $item)
