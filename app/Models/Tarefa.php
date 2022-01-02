@@ -16,4 +16,6 @@ class Tarefa extends Model
     public $incrementing = true;
 
     public $timestamps = false;
+
+    protected $fillable = ['resolvido']; //autoriza a alteração em massa no campo
 }
