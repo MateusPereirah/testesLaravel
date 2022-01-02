@@ -19,8 +19,8 @@ class ConfigController extends Controller
         // $nome = $dados['nome'];
         // $idade = $dados['idade'];
 
-        // $nome = $request->input('nome');
-        // $idade = $request->input('idade');
+        $nome = $request->input('nome');
+        $idade = $request->input('idade');
 
         // $nome = $request->query('nome', "não informado");
         // $idade = $request->query('idade', "não informado");
@@ -36,12 +36,20 @@ class ConfigController extends Controller
 
         // echo "O metodo foi: " .$request->method();
 
-        $nome = "Mateus";
-        $estado = "São Paulo";
+        // $nome = "Mateus";
+        // $idade = 119;
+
+        $lista = [
+            "ovos",
+            "farinha",
+            "fermento",
+            "leite"
+        ];
 
         $dados = [
             'nome' => $nome,
-            'estado' => $estado
+            'idade' => $idade,
+            'lista' => $lista
         ];
 
         return view('config', $dados);

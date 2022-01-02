@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ConfigController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TarefasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,6 +67,21 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/config', [ConfigController::class, 'index']);
 Route::post('/config', [ConfigController::class, 'index']);
 Route::get('/config/user', [ConfigController::class, 'user']);
+
+
+Route::prefix('/tarefas') ->group(function(){
+    Route::get('/', [TarefasController::class, 'index'])->name('tarefas.list'); //listar tarefas
+
+    Route::get('add', [TarefasController::class, 'add'])->name('tarefas.add'); //adicionar tarefas
+    Route::post('add', [TarefasController::class, 'addAction']); //ação de adicionar tarefas
+
+    Route::get('edit/{id}', [TarefasController::class, 'edit'])->name('tarefas.edit'); //tela de edição
+    Route::post('edit/{id}', [TarefasController::class, 'editAction']); //ação de edição
+
+    Route::get('delete/{id}', [TarefasController::class, 'delete'])->name('tarefas.del'); //ação de exclusão
+
+    Route::get('marcar/{id}', [TarefasController::class, 'done'])->name('tarefas.done'); //marcar como resolvido ou não
+});
 
 
 //Sempre recomendado por o fallback por ultimo
